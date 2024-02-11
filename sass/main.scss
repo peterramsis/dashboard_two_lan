@@ -237,7 +237,183 @@ main{
                 width: 92px;
                 height: 92px;
                 border-radius: 50%;
+                .percentage{
+                    position: absolute;
+                    top:5px;
+                    left: -1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                }
             }
+            svg{
+                width: 7rem;
+                height: 7rem;
+                circle{
+                    fill: none;
+                    stroke-width: 10;
+                    stroke-linecap: round;
+                    transform: translate(5px, 5px);
+                }
+                
+            }
+
+        }
+
+        .sales{
+            svg {
+                circle{
+                    stroke: var(--color-success);
+                    stroke-dashoffset: -30;
+                    stroke-dasharray: 200;
+                }
+                
+            }
+        }
+        .users{
+            svg {
+                circle{
+                    stroke: var(--color-danger);
+                    stroke-dashoffset: -30;
+                    stroke-dasharray: 200;
+                }
+                
+            }
+        }
+        .visitator{
+            svg {
+                circle{
+                    stroke: var(--color-warning);
+                    stroke-dashoffset: -30;
+                    stroke-dasharray: 200;
+                }
+                
+            }
+        }
+        .assest{
+            svg {
+                circle{
+                    stroke: var(--color-info-dark);
+                    stroke-dashoffset: -30;
+                    stroke-dasharray: 200;
+                }
+                
+            }
+        }
+    }
+
+    .new-users{
+        margin-top: 1rem;
+        .user-list{
+            background-color: var(--color-white);
+            padding: var(--card-padding);
+            border-radius: var(--card-border-radius);
+            margin-top: 1rem;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3 ease;
+            &:hover{
+                box-shadow: none;
+            }
+            .user{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                    margin-bottom: 0.4rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .recent-orders{
+        margin-top: 1rem;
+      h2{
+        margin-bottom: .7rem;
+      }
+      table{
+        background-color: var(--color-white);
+        width: 100%;
+        
+        text-align: center;
+        box-shadow: var(--box-shadow);
+        border-radius: var(--card-border-radius);
+        transition: all 0.3s ease;
+        &:hover{
+            box-shadow: none;
+        }
+        
+       tbody{
+        td{
+            padding: var(--card-padding);
+            height: 2.8rem;
+            border-bottom: 1px solid var(--color-light);
+            color:  var(--color-dark-variant);;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+       }
+       
+      }
+
+      a{
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+    }
+    }
+
+   
+}
+.right-section{
+    margin-top: 1.4rem;
+    .nav{
+        display: flex;
+        justify-content: end;
+        gap: 2rem;
+        button{
+            display: none;
+        }
+    }
+    .dark-mode{
+        background-color: var(--color-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1.6rem;
+        width: 4.3rem;
+        cursor: pointer;
+        border-radius: var(--border-radius-1);
+        span{
+            font-size: 1.4rem;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    }
+    .profile{
+        display: flex;
+        gap: 2rem;
+        text-align: right;
+        .profile-photo{
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            overflow: hidden;
         }
     }
 }
