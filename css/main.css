@@ -459,4 +459,138 @@ main .recent-orders a {
   color: var(--color-white);
 }
 
+@media screen and (max-width: 1200px) {
+  .all {
+    width: 95%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+  aside .logo h2 {
+    display: inline;
+  }
+  aside .sidebar {
+    display: block;
+  }
+  aside .sidebar a {
+    width: 7rem;
+  }
+  aside .sidebar a h3 {
+    display: none;
+  }
+  aside .sidebar a:last-child {
+    position: relative;
+  }
+  main .analyse {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  main .user-list .user {
+    flex-basis: 40%;
+  }
+  main .recent-orders {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 0.8rem;
+  }
+  main .recent-orders table {
+    width: 83vw;
+  }
+  main .recent-orders table thead tr th:last-child, main .recent-orders table thead tr th:first-child {
+    display: none;
+  }
+  main .recent-orders table tbody tr td:last-child, main .recent-orders table tbody tr td:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .all {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  aside {
+    position: fixed;
+    background-color: var(--color-white);
+    width: 15rem;
+    z-index: 2;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    left: -100%;
+    animation: showMenu 0.4s ease forwards;
+    display: none;
+  }
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+  aside .toggle .close {
+    display: inline;
+  }
+  aside .logo h2 {
+    display: inline;
+  }
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+  aside .sidebar a h3 {
+    display: inline-block;
+  }
+  .analyse {
+    margin-top: 1.8rem;
+  }
+  main {
+    margin-top: 8rem;
+    padding: 0 2rem;
+  }
+  main .recent-orders {
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+  }
+  main .recent-orders table {
+    width: 100%;
+    margin: 0;
+  }
+  main .new-users .user-list .user {
+    flex-basis: 35%;
+  }
+  .right-section {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+  .right-section .nav {
+    width: 100%;
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 0 var(--padding-1);
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 1rem 1rem var(--color-light);
+  }
+  .right-section .nav #btn-menu {
+    display: block;
+    position: absolute;
+    left: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+  .right-section .nav .dark-mode {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
+  .right-section .profile .info {
+    display: none;
+  }
+  .right-section .reminders {
+    padding: 0 2rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

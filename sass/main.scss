@@ -512,11 +512,189 @@ main{
             display: flex;
             gap: 0.6rem;
             align-items: center;
+            h3{
+
+            }
            
         }
         &:hover{
             background-color: var(--color-primary);
             color: var(--color-white);
+        }
+    }
+}
+
+
+// responsive
+
+@media screen and (max-width: 1200px) {
+    .all{
+        width: 95%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside{
+        .logo h2{
+            display: inline;
+        }
+        .sidebar{
+            display: block;
+            a{
+                width: 7rem;
+                h3{
+                    display: none;
+                }
+                &:last-child{
+                    position: relative;
+                }
+            }
+        }
+    }
+    main{
+        .analyse{
+            grid-template-columns: 1fr ;
+            gap: 0;
+        }
+        .user-list{
+            .user{
+                flex-basis: 40%;
+            }
+        }
+
+        .recent-orders{
+            width: 94%;
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+            margin:2rem 0 0 0.8rem;
+            table{
+                width: 83vw;
+                thead tr th:last-child,thead tr th:first-child{
+                    display: none;
+                }
+                tbody tr td:last-child,tbody tr td:first-child{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .all{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 2;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh; 
+        animation: showMenu 0.4s ease forwards;
+        display: none;
+
+        @keyframes showMenu {
+            to{
+             left: 0;
+            } 
+         }
+        .toggle{
+            .close{
+                display: inline;
+            }
+        }
+        .logo h2{
+            display: inline;
+        }
+        .sidebar{
+            
+            a{
+                width: 100%;
+                height: 3.4rem;
+                h3{
+                    display: inline-block;
+                }
+                
+            }
+        }
+    }
+
+    .analyse{
+        margin-top: 1.8rem;
+
+        
+    }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 2rem;
+        
+
+        .recent-orders{
+            position: relative;
+            margin: 3rem 0 0 0;
+            width: 100%;
+            table{
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .new-users{
+            .user-list{
+                .user{
+                    flex-basis: 35%;
+                }
+            }
+        }
+
+        
+    }
+
+    .right-section{
+        width: 94%;
+        margin: 0 auto 4rem;
+        .nav{
+            width: 100%;
+            background-color: var(--color-white);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            padding: 0 var(--padding-1);
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 1rem 1rem var(--color-light);
+            
+            #btn-menu{
+                display: block;
+                position: absolute;
+                left: 10px;
+                background-color: transparent;
+                cursor: pointer;
+                color: var(--color-primary);
+                
+            }
+
+            
+
+            .dark-mode{
+                width: 4.4rem;
+                position: absolute;
+                left: 66%;
+            }
+        }
+
+        .profile .info{
+            display: none;
+        }
+
+        .reminders{
+            padding: 0 2rem;
         }
     }
 }
